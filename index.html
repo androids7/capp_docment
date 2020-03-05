@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Capp开发API用文档</title>
+
+<link rel="stylesheet" href="css/mdui.min.css">
+<style>
+    a:hover{color: black};
+</style>
+<script src="js/mdui.min.js"></script>
+
+</head>
+
+<body class="mdui-theme-primary-pink   mdui-appbar-with-toolbar mdui-theme-accent-red  mdui-theme-layout-dark">
+    
+<div class="mdui-toolbar mdui-color-indigo mdui-appbar mdui-appbar-fixed">
+    <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#drawer', swipe: true}"><i class="mdui-icon material-icons">&#xe900;</i></span>
+    <a href="#" class="mdui-typo-headline">Capp开发API使用文档</a>
+    <div class="mdui-toolbar-spacer"></div>
+    
+    <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" onclick="toggledark()"><i class="mdui-icon materiality-icons" id="theme-btn" mdui-tooltip="{content: '切换为暗色模式'}">&#xe901;</i></span>
+    
+    <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: 'RSS'}" mdui-menu="{target: '#rss'}"><i class="mdui-icon materiality-icons">&#xe903;</i></span>
+    <ul class="mdui-menu" id="rss">
+    <li class="mdui-menu-item">
+    <a href="#" class="mdui-ripple footer-menu-item">文章RSS</a>
+    </li>
+    <li class="mdui-menu-item">
+    <a href="#" class="mdui-ripple footer-menu-item">评论RSS</a>
+    </li>
+    </ul>
+    
+    </div>
+
+
+                 </div>
+
+<p id="out"></p>
+
+
+
+             </div>
+        
+</body>
+
+
+
+
+<script>
+    var contentfun=new Array("cls(int r,int g,int b)","ref(int x,int y,int w,int h)");
+    var contenthelp=new Array("屏幕填充颜色<p>r值红色 最大值255 最小值0</p><p>g值绿色 最大值255 最小值0</p><p>r值蓝色 最大值255 最小值0</p>"
+    ,"刷新屏幕 把绘制的内容显示在屏幕上");
+    //开头
+    var starcontent=" <div class='page-content' ><div class='translate-box'></div><div class='mdui-container' id='main'><div class='mdui-card mdui-shadow-3 mdui-hoverable mdui-m-y-3'>"+
+         "<div class='mdui-card-primary'><div class='mdui-card-primary-title'><a class='mdui-text-color-white-secondary' href='#'>";
+    
+            //函数开头结束
+    var mediaumstart="</a></div><div class='mdui-card-primary-subtitle mdui-text-color-theme-text'> Mar 03, 2020 </div></div><div class='mdui-card-content mdui-typo'>";
+    
+        var endcontent="</div><div class='mdui-card-actions'> <a class='mdui-btn mdui-ripple mdui-text-color-theme-accent' href='#'>继续阅读</a></div></div></div>";
+        
+      var content=  document.getElementById("out");
+    for(i=0;i<contentfun.length;i++){
+    str=starcontent+contentfun[i]+mediaumstart+contenthelp[i]+endcontent;
+    document.write(str);
+    
+    }
+    
+    document.write("<p align='center'>power by androids7</>");
+    
+    
+    </script>
+</html>
